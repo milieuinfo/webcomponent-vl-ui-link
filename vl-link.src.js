@@ -35,7 +35,7 @@ export class VlLink extends NativeVlElement(HTMLAnchorElement) {
 
     _setIconLinkAttribute() {
         this._iconElementen.forEach((icon) => {
-            icon.setAttribute('link', '');
+            icon.setAttribute('data-vl-link', '');
         });
     }
 }
