@@ -1,6 +1,6 @@
 {
   "name": "vl-ui-link",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Gebruik een link om de gebruiker door te verwijzen naar een andere URL, bijvoorbeeld een nieuwe pagina of een document.",
   "main": "vl-link.js",
   "author": "DIDM",
