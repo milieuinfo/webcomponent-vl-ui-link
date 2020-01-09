@@ -24,9 +24,9 @@
         </template>
     </test-fixture>
 
-    <test-fixture id="vl-link-button-fixture">
+    <test-fixture id="vl-button-link-fixture">
         <template>
-            <a is="vl-link-button"></a>
+            <button is="vl-button-link" type="button" id="button-link">Button</button>
         </template>
     </test-fixture>
 
@@ -57,12 +57,10 @@
             });
         });
 
-        suite('<vl-link-button>', () => {
-            const should = chai.should();
-
-            test('heeft de vl-button class', () => {
-                const linkButton = fixture('vl-link-button-fixture');
-                assert.isTrue(linkButton.classList.contains('vl-button'));
+        suite('<vl-button-link>', () => {
+            test('heeft de vl-link class', () => {
+                const buttonLink = fixture('vl-button-link-fixture');
+                assert.isTrue(buttonLink.classList.contains('vl-link'));
             });
         });
     </script>
