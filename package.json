@@ -40,7 +40,6 @@
     "demo": "http-server"
   },
   "dependencies": {
-    "chromedriver": "^79.0.0",
     "vl-ui-core": "^3.0.0"
   },
   "peerDependencies": {
