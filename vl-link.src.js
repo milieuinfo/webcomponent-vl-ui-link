@@ -1,5 +1,4 @@
 import { NativeVlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
-import { VlButtonElement } from '/node_modules/vl-ui-button/vl-button.js';
 
 export const VlLinkElement = (SuperClass) => {
     return class extends NativeVlElement(SuperClass) {
@@ -50,9 +49,9 @@ export const VlLinkElement = (SuperClass) => {
 export class VlLink extends VlLinkElement(HTMLAnchorElement) {}
 
 /**
- * VlLinkButton
+ * VlButtonLink
  * @class
- * @classdesc Gebruik de vl-link-button om een ​​call-to-action toe te voegen.
+ * @classdesc Een button gestyled als link.
  *
  * @extends NativeVlElement
  *
@@ -60,7 +59,7 @@ export class VlLink extends VlLinkElement(HTMLAnchorElement) {}
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-link/issues|Issues}
  * @see {@link https://webcomponenten.omgeving.vlaanderen.be/demo/vl-link.html|Demo}
  */
-export class VlLinkButton extends VlButtonElement(HTMLAnchorElement) {}
+export class VlButtonLink extends VlLinkElement(HTMLButtonElement) {}
 
 define('vl-link', VlLink, {extends: 'a'});
-define('vl-link-button', VlLinkButton, {extends: 'a'});
+define('vl-button-link', VlButtonLink, {extends: 'button'});
