@@ -8,4 +8,10 @@ describe('vl-link', async () => {
         return vlLinkPage.load();
     });
 
+    after((done) => { 
+        if (driver) {
+            driver.quit();
+        }
+        done();
+    });
 });
