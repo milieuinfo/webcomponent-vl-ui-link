@@ -1,4 +1,4 @@
-import { NativeVlElement, define } from 'vl-core';
+import { NativeVlElement, define } from 'vl-ui-core';
 
 export const VlLinkElement = (SuperClass) => {
     return class extends NativeVlElement(SuperClass) {
