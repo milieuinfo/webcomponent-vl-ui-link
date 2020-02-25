@@ -1,5 +1,5 @@
 module.exports = { 
-    VlLink: require('../vl-link.src.js').VlLink,
-    VlLinkElement: require('../vl-link.src.js').VlLinkElement,
-    VlButtonLink: require('../vl-link.src.js').VlButtonLink
+    VlLink: require('../dist/vl-link.src.js').VlLink,
+    VlLinkElement: require('../dist/vl-link.src.js').VlLinkElement,
+    VlButtonLink: require('../dist/vl-link.src.js').VlButtonLink
 }
