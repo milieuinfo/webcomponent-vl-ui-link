@@ -8,10 +8,6 @@ describe('vl-link', async () => {
         return vlLinkPage.load();
     });
 
-    after((done) => { 
-        if (driver) {
-            driver.quit();
-        }
-        done();
+    it("Dummy test om de browsers te laten sluiten", () => {
     });
 });
