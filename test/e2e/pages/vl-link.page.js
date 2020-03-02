@@ -14,8 +14,8 @@ class VlLinkPage extends Page {
         await super.load(`${Config.baseUrl}/demo/vl-link.html`);
     }
 
-    async getLinkWithIcon() {
-        return this._getLink('#link-with-icon');
+    async getLink() {
+        return this._getLink('#link');
     }
 
     async getButtonLink() {

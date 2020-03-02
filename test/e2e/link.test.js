@@ -8,19 +8,15 @@ describe('vl-link', async () => {
         return vlLinkPage.load();
     });
 
-    it('Als gebruiker kan ik een icoon bij de link zien', async () => {
-        const link = await vlLinkPage.getLinkWithIcon();
+    it('Als gebruiker kan ik de tekst van een link zien', async () => {
+        const link = await vlLinkPage.getLink();
 
-        const icons = await link.getIcons();
-        await assert.lengthOf(icons, 1);
-        await assert.eventually.equal(icons[0].getType(), 'arrow-right-fat');
+        await assert.eventually.equal(link.getText(), 'Terug naar overzicht');
     });
 
-    it('Als gebruiker kan ik een button gestyled als link zien, inclusief icoon', async () => {
+    it('Als gebruiker kan ik de tekst van een button gestyled als link zien', async () => {
         const buttonLink = await vlLinkPage.getButtonLink();
 
-        const icons = await buttonLink.getIcons();
-        await assert.lengthOf(icons, 1);
-        await assert.eventually.equal(icons[0].getType(), 'arrow-right-fat');
+        await assert.eventually.equal(buttonLink.getText(), 'Demo link');
     });
 });
