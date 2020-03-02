@@ -1,4 +1,4 @@
-const VlLink = require('../components/vl-link');
+const { VlLink, VlButtonLink } = require('../components/vl-link');
 const { Page, Config } = require('vl-ui-core').Test;
 
 class VlLinkPage extends Page {
@@ -6,8 +6,20 @@ class VlLinkPage extends Page {
         return new VlLink(this.driver, selector);
     }
 
+    async _getButtonLink(selector) {
+        return new VlButtonLink(this.driver, selector);
+    }
+
     async load() {
-        await super.load(Config.baseUrl + '/demo/vl-link.html');
+        await super.load(`${Config.baseUrl}/demo/vl-link.html`);
+    }
+
+    async getLink() {
+        return this._getLink('#link');
+    }
+
+    async getButtonLink() {
+        return this._getButtonLink('#button-link');
     }
 }
 

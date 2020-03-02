@@ -8,6 +8,15 @@ describe('vl-link', async () => {
         return vlLinkPage.load();
     });
 
-    it("Dummy test om de browsers te laten sluiten", () => {
+    it('Als gebruiker kan ik de tekst van een link zien', async () => {
+        const link = await vlLinkPage.getLink();
+
+        await assert.eventually.equal(link.getText(), 'Terug naar overzicht');
+    });
+
+    it('Als gebruiker kan ik de tekst van een button gestyled als link zien', async () => {
+        const buttonLink = await vlLinkPage.getButtonLink();
+
+        await assert.eventually.equal(buttonLink.getText(), 'Demo link');
     });
 });

@@ -1,9 +1,7 @@
 const { VlElement } = require('vl-ui-core').Test;
 
-class VlLink extends VlElement {  
-    constructor(driver, selector) {
-        super(driver, selector);
-    }
-}
+class VlLink extends VlElement { }
 
-module.exports = VlLink;
+class VlButtonLink extends VlLink { }
+
+module.exports = { VlLink, VlButtonLink };
