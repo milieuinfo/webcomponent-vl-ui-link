@@ -1,11 +1,6 @@
 const {VlElement} = require('vl-ui-core').Test;
 
-class VlLink extends VlElement {
-  async getText() {
-    const text = await super.getText();
-    return text.trim();
-  }
-}
+class VlLink extends VlElement {}
 
 class VlButtonLink extends VlLink { }
 
