@@ -41,7 +41,7 @@
         const link = fixture('vl-link-fixture');
         ['block'].forEach((attribuut) => {
           assert.isFalse(link.classList.contains('vl-link--' + attribuut));
-          link.setAttribute(attribuut, '');
+          link.setAttribute(`data-vl-${attribuut}`, '');
           assert.isTrue(link.classList.contains('vl-link--' + attribuut));
           link.removeAttribute(attribuut);
           assert.isFalse(link.classList.contains('vl-link--' + attribuut));

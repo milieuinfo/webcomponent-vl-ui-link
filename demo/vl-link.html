@@ -13,14 +13,13 @@
 </head>
 
 <body>
-    <vl-demo-page data-vl-webcomponent="vl-link"
-        data-vl-link="https://overheid.vlaanderen.be/webuniversum/v3/documentation/atoms/vl-ui-link">
+    <vl-demo-page data-vl-webcomponent="vl-link" data-vl-link="https://overheid.vlaanderen.be/webuniversum/v3/documentation/atoms/vl-ui-link">
         <vl-demo data-vl-title="Link">
             <a id="link" is="vl-link" href="#">Terug naar overzicht</a>
         </vl-demo>
 
         <vl-demo data-vl-title="Link block">
-            <a is="vl-link" href="#" block>Terug naar overzicht</a>
+            <a id="link-block" is="vl-link" href="#" data-vl-block>Terug naar overzicht</a>
         </vl-demo>
 
         <vl-demo data-vl-title="Link with icon before text">
@@ -52,11 +51,11 @@
         </vl-demo>
 
         <vl-demo data-vl-title="Button link">
-            <a is="vl-link" id="button-a-link" block>
+            <a is="vl-link" id="button-a-link" data-vl-block>
                 <span is="vl-icon" data-vl-icon="arrow-right-fat" data-vl-before></span>
                 Demo link
             </a>
-            <button id="button-link" is="vl-button-link" type="button" id="button-link" block>
+            <button id="button-link" is="vl-button-link" type="button" id="button-link" data-vl-block>
                 <span is="vl-icon" data-vl-icon="arrow-right-fat" data-vl-before></span>
                 Demo link
             </button>
