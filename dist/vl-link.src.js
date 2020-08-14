@@ -1,5 +1,13 @@
 import {nativeVlElement, define} from 'vl-ui-core';
 
+/**
+ * Gebruik de link mixin in combinatie met link elementen.
+ * @mixin vlLinkElement
+ *
+ * @property {string} data-vl-block - Attribuut zorgt ervoor dat het element als block getoond wordt.
+ * @param {Object} SuperClass - Class die als base class gebruikt zal worden.
+ * @return {Object} class
+ */
 export const vlLinkElement = (SuperClass) => {
   return class extends nativeVlElement(SuperClass) {
     static get _observedAttributes() {
@@ -39,6 +47,7 @@ export const VlLinkElement = vlLinkElement;
  * @classdesc Gebruik de vl-link om de gebruiker door te verwijzen naar een andere URL, bijvoorbeeld een nieuwe pagina of een document.
  *
  * @extends HTMLAnchorElement
+ * @mixes vlLinkElement
  *
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-link/releases/latest|Release notes}
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-link/issues|Issues}
@@ -52,6 +61,7 @@ export class VlLink extends vlLinkElement(HTMLAnchorElement) {}
  * @classdesc Een button gestyled als link.
  *
  * @extends HTMLButtonElement
+ * @mixes vlLinkElement
  *
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-link/releases/latest|Release notes}
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-link/issues|Issues}
