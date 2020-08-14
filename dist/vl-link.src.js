@@ -4,7 +4,6 @@ import {nativeVlElement, define} from 'vl-ui-core';
  * Gebruik de link mixin in combinatie met link elementen.
  * @mixin vlLinkElement
  *
- * @property {string} data-vl-block - Attribuut zorgt ervoor dat het element als block getoond wordt.
  * @param {Object} SuperClass - Class die als base class gebruikt zal worden.
  * @return {Object} class
  */
@@ -49,6 +48,8 @@ export const VlLinkElement = vlLinkElement;
  * @extends HTMLAnchorElement
  * @mixes vlLinkElement
  *
+ *@property {string} data-vl-block - Attribuut zorgt ervoor dat het element als block getoond wordt.
+ *
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-link/releases/latest|Release notes}
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-link/issues|Issues}
  * @see {@link https://webcomponenten.omgeving.vlaanderen.be/demo/vl-link.html|Demo}
@@ -62,6 +63,8 @@ export class VlLink extends vlLinkElement(HTMLAnchorElement) {}
  *
  * @extends HTMLButtonElement
  * @mixes vlLinkElement
+ *
+ * @property {string} data-vl-block - Attribuut zorgt ervoor dat het element als block getoond wordt.
  *
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-link/releases/latest|Release notes}
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-link/issues|Issues}
