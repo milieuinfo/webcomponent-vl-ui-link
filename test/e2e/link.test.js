@@ -9,6 +9,10 @@ describe('vl-link', async () => {
     return vlLinkPage.load();
   });
 
+  it('WCAG', async () => {
+    await assert.eventually.isFalse(vlLinkPage.hasWcagIssues());
+  });
+
   it('als gebruiker kan ik de tekst van een link zien', async () => {
     const link = await vlLinkPage.getLink();
     await assert.eventually.equal(link.getText(), 'Terug naar overzicht');
