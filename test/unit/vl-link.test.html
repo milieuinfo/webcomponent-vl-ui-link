@@ -39,12 +39,12 @@
 
       test('krijgt de juiste class wanneer de link een attribuut bevat', () => {
         const link = fixture('vl-link-fixture');
-        ['block'].forEach((attribuut) => {
-          assert.isFalse(link.classList.contains('vl-link--' + attribuut));
-          link.setAttribute(`data-vl-${attribuut}`, '');
-          assert.isTrue(link.classList.contains('vl-link--' + attribuut));
-          link.removeAttribute(`data-vl-${attribuut}`);
-          assert.isFalse(link.classList.contains('vl-link--' + attribuut));
+        ['block'].forEach((attribute) => {
+          assert.isFalse(link.classList.contains('vl-link--' + attribute));
+          link.setAttribute(`data-vl-${attribute}`, '');
+          assert.isTrue(link.classList.contains('vl-link--' + attribute));
+          link.removeAttribute(`data-vl-${attribute}`);
+          assert.isFalse(link.classList.contains('vl-link--' + attribute));
         });
       });
 
@@ -52,6 +52,16 @@
         const link = fixture('vl-link-fixture-icon');
         const icon = link.querySelector('span[is="vl-icon"');
         assert.isDefined(icon.getAttribute('link'));
+      });
+
+      test('het error attribuut genereert de juiste class', () => {
+        const link = fixture('vl-link-fixture');
+        const errorClass = 'vl-u-text--error';
+        assert.isFalse(link.classList.contains(errorClass));
+        link.setAttribute(`data-vl-error`, '');
+        assert.isTrue(link.classList.contains(errorClass));
+        link.removeAttribute(`data-vl-error`);
+        assert.isFalse(link.classList.contains(errorClass));
       });
     });
 

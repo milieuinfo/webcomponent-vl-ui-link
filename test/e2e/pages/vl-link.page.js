@@ -10,6 +10,10 @@ class VlLinkPage extends Page {
     return this._getLink('#link-block');
   }
 
+  async getErrorLink() {
+    return this._getLink('#link-error');
+  }
+
   async getButtonLink() {
     return this._getButtonLink('#button-link');
   }
