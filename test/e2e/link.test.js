@@ -29,4 +29,11 @@ describe('vl-link', async () => {
     await assert.eventually.isFalse(link.isBlock());
     await assert.eventually.isTrue(blockLink.isBlock());
   });
+
+  it('als gebruiker wil ik het verschil kunnen zien tussen een error en een gewone link', async () => {
+    const link = await vlLinkPage.getLink();
+    const errorLink = await vlLinkPage.getErrorLink();
+    await assert.eventually.isFalse(link.isError());
+    await assert.eventually.isTrue(errorLink.isError());
+  });
 });
