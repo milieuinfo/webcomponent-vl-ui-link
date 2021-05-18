@@ -39,13 +39,13 @@
 
       test('krijgt de juiste class wanneer de link een attribuut bevat', () => {
         const link = fixture('vl-link-fixture');
-        ['block'].forEach((attribute) => {
-          assert.isFalse(link.classList.contains('vl-link--' + attribute));
-          link.setAttribute(`data-vl-${attribute}`, '');
-          assert.isTrue(link.classList.contains('vl-link--' + attribute));
-          link.removeAttribute(`data-vl-${attribute}`);
-          assert.isFalse(link.classList.contains('vl-link--' + attribute));
-        });
+        const attribute = 'data-vl-block';
+        const clazz = 'vl-link--block';
+        assert.isFalse(link.classList.contains(clazz));
+        link.setAttribute(attribute, '');
+        assert.isTrue(link.classList.contains(clazz));
+        link.removeAttribute(attribute);
+        assert.isFalse(link.classList.contains(clazz));
       });
 
       test('zet het link attribuut op icon elementen indien deze aanwezig zijn in het slot', () => {
